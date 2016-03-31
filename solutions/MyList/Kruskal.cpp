@@ -1,6 +1,7 @@
 #include "Kruskal.h"
 
-void initGraph(std::vector < std::pair < int, std::pair<int, int> > > *g, int p, int a, int b) {
+void initGraph(std::vector < std::pair < int, std::pair<int, int> > >*g,
+int p, int a, int b) {
   (*g).push_back(std::make_pair(p, std::make_pair(a, b)));
 }
 
@@ -14,7 +15,8 @@ void sortt(std::vector < std::pair < int, std::pair <int, int> > > *g,  int n) {
      }
 }
 
-int kruskal(std::vector < std::pair < int, std::pair <int, int> > > g, const int n, const int m) {
+int kruskal(std::vector < std::pair < int, std::pair <int, int> > > g,
+const int n, const int m) {
   int sum = 0;
   sortt(&g, m);
   Sset s(n);
