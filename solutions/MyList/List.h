@@ -7,14 +7,13 @@ class Sset {
   int* p;
   int s;
  public:
-  Sset(int _s);
-  Sset(Sset& c);
+  explicit Sset(int _s);
+  Sset(const Sset& c);
   ~Sset();
 
   void singleton(int v);
   int search(int v);
   void merge(int a, int b);
-
 };
 
 

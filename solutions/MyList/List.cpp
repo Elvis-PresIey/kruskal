@@ -6,10 +6,10 @@ Sset::Sset(int _s) {
   for (int i = 0; i < s; i++) p[i] = i;
 }
 
-Sset::Sset(Sset& c) {
-  c.s = s;
-  c.p = new int[s];
-  for (int i = 0; i < s; i++) c.p[i] = p[i];
+Sset::Sset(const Sset& c) {
+  s = c.s;
+  p = new int[s];
+  for (int i = 0; i < s; i++) p[i] = c.p[i];
 }
 
 Sset::~Sset() { delete[] p; }
